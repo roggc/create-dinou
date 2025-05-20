@@ -18,7 +18,7 @@
     "Typescript",
     "Javascript"
   ],
-  "author": "roger gomez castells (roggc)",
+  "author": "Roger Gomez Castells (roggc)",
   "license": "MIT",
   "dependencies": {
     "commander": "^11.0.0",

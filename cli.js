@@ -7,8 +7,8 @@ import fs from "fs-extra";
 
 program
   .arguments("<project-name>")
-  .description("Creates a React 19 app")
-  .option("--ssr", "Create React 19 with SSR app")
+  .description("Creates a React 19 app (TypeScript or JavaScript)")
+  .option("--ssr", "Create React 19 with SSR app (under development)")
   .action((projectName, options) => {
     const projectPath = path.join(process.cwd(), projectName);
     let repositoryUrl = "https://github.com/roggc/react19.git";
