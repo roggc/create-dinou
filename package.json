@@ -1,23 +1,25 @@
 {
-  "name": "create-rsc-app",
-  "version": "1.0.6",
-  "description": "Create a React Server Components app, optionally with SSR (Server Side Rendering)",
+  "name": "create-react19-app",
+  "version": "1.0.0",
+  "description": "Creates a React 19 app with Server Functions, Server Components, and Suspense support.",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "create-rsc-app": "cli.js"
+    "create-react19-app": "cli.js"
   },
   "keywords": [
-    "React Server Components",
-    "Server Side Rendering",
-    "React",
-    "Setup"
+    "React 19",
+    "Server Functions",
+    "Server Components",
+    "Suspense",
+    "Typescript",
+    "Javascript"
   ],
   "author": "roger gomez castells (roggc)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^11.0.0",
     "fs-extra": "^11.2.0"

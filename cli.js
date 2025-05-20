@@ -3,23 +3,21 @@
 import { program } from "commander";
 import { exec } from "child_process";
 import path from "path";
-import fs from "fs-extra"; // Import fs-extra en lugar de fs
+import fs from "fs-extra";
 
 program
   .arguments("<project-name>")
-  .description("Create a new React Server Components project")
-  .option("--ssr", "create rsc + ssr app")
+  .description("Creates a React 19 app")
+  .option("--ssr", "Create React 19 with SSR app")
   .action((projectName, options) => {
     const projectPath = path.join(process.cwd(), projectName);
-    let repositoryUrl = "https://github.com/roggc/rsc.git";
+    let repositoryUrl = "https://github.com/roggc/react19.git";
 
-    if (options.ssr) {
-      repositoryUrl = "https://github.com/roggc/rsc-ssr.git";
-    }
+    // if (options.ssr) {
+    //   repositoryUrl = "https://github.com/roggc/rsc-ssr.git";
+    // }
 
-    console.log(
-      `Creating a new React Server Components project: ${projectName}`
-    );
+    console.log(`Creating a new React 19 app: ${projectName}`);
 
     // Clone the repository
     exec(`git clone ${repositoryUrl} ${projectName}`, (error) => {
