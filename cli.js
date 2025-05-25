@@ -7,15 +7,20 @@ import fs from "fs-extra";
 
 program
   .arguments("<project-name>")
-  .description("Creates a React 19 app (TypeScript or JavaScript)")
-  .option("--ssr", "Create React 19 with SSR app (under development)")
+  .description(
+    "Creates a React 19 SSR multi-page app (TypeScript or JavaScript)"
+  )
+  .option(
+    "--nossr",
+    "Create a React 19 SPA without SSR (TypeScript or JavaScript)"
+  )
   .action((projectName, options) => {
     const projectPath = path.join(process.cwd(), projectName);
-    let repositoryUrl = "https://github.com/roggc/react19.git";
+    let repositoryUrl = "https://github.com/roggc/react19ssr.git";
 
-    // if (options.ssr) {
-    //   repositoryUrl = "https://github.com/roggc/rsc-ssr.git";
-    // }
+    if (options.nossr) {
+      repositoryUrl = "https://github.com/roggc/react19.git";
+    }
 
     console.log(`Creating a new React 19 app: ${projectName}`);
 
