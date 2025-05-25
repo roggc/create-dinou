@@ -1,6 +1,6 @@
 {
   "name": "create-react19-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates a React 19 app with Server Functions, Server Components, and Suspense support.",
   "type": "module",
   "main": "index.js",
