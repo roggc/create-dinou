@@ -1,24 +1,17 @@
 {
-  "name": "create-react19-app",
-  "version": "1.0.1",
-  "description": "Creates a React 19 app with Server Functions, Server Components, and Suspense support.",
+  "name": "create-dinou",
+  "version": "0.0.1",
+  "description": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "create-react19-app": "cli.js"
+    "create-dinou": "cli.js"
   },
-  "keywords": [
-    "React 19",
-    "Server Functions",
-    "Server Components",
-    "Suspense",
-    "Typescript",
-    "Javascript"
-  ],
-  "author": "Roger Gomez Castells (roggc)",
+  "keywords": [],
+  "author": "Roger Gomez Castells (@roggc)",
   "license": "MIT",
   "dependencies": {
     "commander": "^11.0.0",
