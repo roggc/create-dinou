@@ -7,22 +7,20 @@ import fs from "fs-extra";
 
 program
   .arguments("<project-name>")
-  .description(
-    "Creates a React 19 SSR multi-page app (TypeScript or JavaScript)"
-  )
-  .option(
-    "--nossr",
-    "Create a React 19 SPA without SSR (TypeScript or JavaScript)"
-  )
+  .description("Creates a dinou app ready to start development")
+  // .option(
+  //   "--nossr",
+  //   "Create a React 19 SPA without SSR (TypeScript or JavaScript)"
+  // )
   .action((projectName, options) => {
     const projectPath = path.join(process.cwd(), projectName);
-    let repositoryUrl = "https://github.com/roggc/react19ssr.git";
+    let repositoryUrl = "https://github.com/roggc/dinou-app.git";
 
-    if (options.nossr) {
-      repositoryUrl = "https://github.com/roggc/react19.git";
-    }
+    // if (options.nossr) {
+    //   repositoryUrl = "https://github.com/roggc/react19.git";
+    // }
 
-    console.log(`Creating a new React 19 app: ${projectName}`);
+    console.log(`Creating a new dinou app: ${projectName}`);
 
     // Clone the repository
     exec(`git clone ${repositoryUrl} ${projectName}`, (error) => {
@@ -73,7 +71,7 @@ program
                   return;
                 }
 
-                console.log("Project setup complete.");
+                console.log("dinou app ready");
               });
             });
           });
