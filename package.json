@@ -1,7 +1,7 @@
 {
   "name": "create-dinou",
   "version": "0.0.3",
-  "description": "",
+  "description": "Command to create dinou app",
   "type": "module",
   "main": "index.js",
   "scripts": {
