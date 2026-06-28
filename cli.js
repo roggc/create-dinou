@@ -41,37 +41,44 @@ program
 
         console.log(".git directory removed successfully.");
 
-        // Initialize a new git repository
-        exec("git init", (error) => {
+        // Remove package-lock.json to generate a clean, platform-specific one
+        fs.remove(path.join(projectPath, "package-lock.json"), (error) => {
           if (error) {
-            console.error(`Error initializing a new git repository: ${error}`);
-            return;
+            console.warn(`Warning: Could not remove package-lock.json: ${error}`);
           }
 
-          // Add all files to the new repository
-          exec("git add .", (error) => {
+          console.log("Installing dependencies... (This may take a moment)");
+          // Install project dependencies FIRST (this creates the lockfile natively)
+          exec("npm install", (error) => {
             if (error) {
-              console.error(`Error adding files to the repository: ${error}`);
+              console.error(`Error installing dependencies: ${error}`);
               return;
             }
 
-            // Commit the changes
-            exec('git commit -m "Initial commit"', (error) => {
+            // Initialize a new git repository
+            exec("git init", (error) => {
               if (error) {
-                console.error(`Error creating the initial commit: ${error}`);
+                console.error(`Error initializing a new git repository: ${error}`);
                 return;
               }
 
-              console.log("Initial commit created successfully.");
-
-              // Install project dependencies
-              exec("npm install", (error) => {
+              // Add all files to the new repository (including the new package-lock.json)
+              exec("git add .", (error) => {
                 if (error) {
-                  console.error(`Error installing dependencies: ${error}`);
+                  console.error(`Error adding files to the repository: ${error}`);
                   return;
                 }
 
-                console.log("dinou app ready");
+                // Commit the changes
+                exec('git commit -m "Initial commit"', (error) => {
+                  if (error) {
+                    console.error(`Error creating the initial commit: ${error}`);
+                    return;
+                  }
+
+                  console.log("Initial commit created successfully.");
+                  console.log("dinou app ready");
+                });
               });
             });
           });
