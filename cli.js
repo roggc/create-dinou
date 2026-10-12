@@ -48,7 +48,7 @@ async function main() {
 
   program
     .name("create-dinou")
-    .description("Scaffold a new Dinou v7 application")
+    .description("Scaffold a new Dinou application")
     .argument("[project-name]", "Name of the project directory")
     .option("-t, --template <url>", "Git repository template", "https://github.com/roggc/dinou-app.git")
     .option("-y, --yes", "Skip prompts and use defaults", false)
