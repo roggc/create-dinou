@@ -1,6 +1,6 @@
 {
   "name": "create-dinou",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Command to scaffold a new Dinou application",
   "type": "module",
   "bin": {
