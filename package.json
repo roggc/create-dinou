@@ -14,7 +14,9 @@
   "author": "Roger Gomez Castells (@roggc)",
   "license": "MIT",
   "dependencies": {
+    "@clack/prompts": "^1.8.1",
     "commander": "^11.0.0",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "picocolors": "^1.1.1"
   }
 }
