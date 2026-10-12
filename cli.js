@@ -64,7 +64,7 @@ async function main() {
 
   // Banner inicial
   p.intro(
-    `${pc.bgCyan(pc.black(" create-dinou "))} ${pc.cyan(`v${version}`)} ${pc.dim("— The Fullstack TypeScript Framework")}`
+    `${pc.bgCyan(pc.black(" create-dinou "))} ${pc.cyan(`v${version}`)} ${pc.dim("— The React 19 Framework")}`
   );
 
   // 1. Preguntar nombre del proyecto si no se especificó como argumento
@@ -225,7 +225,7 @@ async function main() {
   nextSteps.push(runCmd);
 
   p.note(nextSteps.map((step) => pc.cyan(step)).join("\n"), "Next steps:");
-  p.outro(pc.green("✨ Your Dinou v7 app is ready to develop! Happy coding! 🦕"));
+  p.outro(pc.green("✨ Your Dinou app is ready to develop! Happy coding! 🦖"));
 }
 
 main().catch((err) => {
